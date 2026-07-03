@@ -1,0 +1,16 @@
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGangwon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfe6ee"/>
+      <stop offset="100%" stop-color="#e8f7f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#skyGangwon)"/>
+  <circle cx="330" cy="55" r="26" fill="#ffe9a8"/>
+  <polygon points="0,190 90,90 150,170 210,70 290,190" fill="#5b7a95"/>
+  <polygon points="120,190 210,110 260,190" fill="#799ab0"/>
+  <polygon points="250,190 340,80 400,190" fill="#3e5a70"/>
+  <polygon points="60,150 90,90 120,150" fill="#ffffff" opacity="0.6"/>
+  <polygon points="180,130 210,70 240,130" fill="#ffffff" opacity="0.6"/>
+  <rect x="0" y="190" width="400" height="50" fill="#8fb99e"/>
+</svg>

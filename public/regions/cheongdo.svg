@@ -1,0 +1,28 @@
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyCheongdo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfe6ee"/>
+      <stop offset="100%" stop-color="#eaf8f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#skyCheongdo)"/>
+  <rect x="0" y="190" width="400" height="50" fill="#9fc2a8"/>
+  <polygon points="0,190 60,140 120,190" fill="#8a8f7a" opacity="0.7"/>
+  <polygon points="300,190 360,130 400,190" fill="#7c8270" opacity="0.7"/>
+
+  <path d="M40,185 C120,160 160,210 240,175 C300,150 340,190 380,170" stroke="#a15b1a" stroke-width="6" fill="none" stroke-dasharray="14 10"/>
+
+  <g transform="translate(170,90)">
+    <circle cx="30" cy="30" r="30" fill="#ffd873"/>
+    <path d="M14,26 Q30,44 46,26" stroke="#a15b1a" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="18" cy="20" r="4" fill="#a15b1a"/>
+    <circle cx="42" cy="20" r="4" fill="#a15b1a"/>
+  </g>
+
+  <g transform="translate(255,95)">
+    <circle cx="25" cy="25" r="25" fill="#e07a5f"/>
+    <path d="M12,32 Q25,20 38,32" stroke="#7a2c1a" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="15" cy="18" r="3.5" fill="#7a2c1a"/>
+    <circle cx="35" cy="18" r="3.5" fill="#7a2c1a"/>
+  </g>
+</svg>

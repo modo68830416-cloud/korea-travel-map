@@ -1,0 +1,20 @@
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGyeong" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a7d6df"/>
+      <stop offset="100%" stop-color="#e8f7f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#skyGyeong)"/>
+  <rect x="0" y="200" width="400" height="40" fill="#5b8f97"/>
+  <path d="M60,200 C60,150 130,150 130,200" stroke="#3f6b72" stroke-width="10" fill="none"/>
+  <path d="M270,200 C270,150 340,150 340,200" stroke="#3f6b72" stroke-width="10" fill="none"/>
+  <line x1="60" y1="150" x2="340" y2="150" stroke="#3f6b72" stroke-width="6"/>
+  <g>
+    <rect x="175" y="120" width="50" height="10" fill="#a15b1a"/>
+    <polygon points="168,120 232,120 200,95" fill="#c97a2f"/>
+    <rect x="180" y="130" width="40" height="10" fill="#a15b1a"/>
+    <polygon points="174,130 226,130 200,108" fill="#d9902f"/>
+    <rect x="190" y="140" width="20" height="60" fill="#8a3f16"/>
+  </g>
+</svg>

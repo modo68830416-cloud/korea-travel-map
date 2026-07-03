@@ -1,0 +1,21 @@
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skySudo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a9d9e2"/>
+      <stop offset="100%" stop-color="#e8f7f9"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#skySudo)"/>
+  <rect x="0" y="190" width="400" height="50" fill="#7fa6ac"/>
+  <rect x="30" y="120" width="26" height="80" fill="#5c7d82"/>
+  <rect x="70" y="100" width="22" height="100" fill="#6c8e93"/>
+  <rect x="300" y="110" width="28" height="90" fill="#5c7d82"/>
+  <rect x="340" y="90" width="24" height="110" fill="#6c8e93"/>
+  <g>
+    <rect x="150" y="150" width="100" height="14" fill="#a15b1a"/>
+    <polygon points="140,150 260,150 200,110" fill="#c97a2f"/>
+    <rect x="170" y="164" width="60" height="36" fill="#8a3f16"/>
+  </g>
+  <rect x="185" y="60" width="30" height="60" fill="#8a3f16"/>
+  <polygon points="175,60 225,60 200,40" fill="#c97a2f"/>
+</svg>

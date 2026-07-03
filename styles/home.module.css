@@ -146,6 +146,14 @@
   font-size: 1.4rem;
 }
 
+.mapTileImage {
+  width: calc(100% - 12px);
+  height: 28px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 2px;
+}
+
 .tile_gangwon {
   grid-area: gangwon;
 }
@@ -183,6 +191,17 @@
 .courseDetail {
   background: #f2fafb;
   border-radius: 16px;
+  overflow: hidden;
+}
+
+.courseDetailImage {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  display: block;
+}
+
+.courseDetailBody {
   padding: 24px 28px;
 }
 
@@ -272,10 +291,9 @@
 .courseCard {
   border: 1px solid #dcedf0;
   border-radius: 14px;
-  padding: 20px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 6px;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -284,9 +302,18 @@
   box-shadow: 0 10px 24px rgba(10, 74, 84, 0.1);
 }
 
-.courseCardThumb {
-  font-size: 2rem;
-  margin-bottom: 4px;
+.courseCardImage {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+}
+
+.courseCardBody {
+  padding: 16px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .courseCardTitle {

@@ -1,0 +1,20 @@
+<svg width="400" height="240" viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyChung" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfe6ee"/>
+      <stop offset="100%" stop-color="#eaf8f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="240" fill="url(#skyChung)"/>
+  <rect x="0" y="190" width="400" height="50" fill="#9fc2a8"/>
+  <polygon points="40,190 90,120 140,190" fill="#8a8f7a"/>
+  <polygon points="120,190 180,100 240,190" fill="#7c8270"/>
+  <g>
+    <rect x="255" y="150" width="90" height="10" fill="#a15b1a"/>
+    <polygon points="248,150 352,150 300,120" fill="#d9902f"/>
+    <rect x="270" y="160" width="10" height="30" fill="#a15b1a"/>
+    <rect x="320" y="160" width="10" height="30" fill="#a15b1a"/>
+    <rect x="275" y="100" width="50" height="10" fill="#a15b1a"/>
+    <polygon points="270,100 330,100 300,78" fill="#e0a24a"/>
+  </g>
+</svg>

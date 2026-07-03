@@ -6,12 +6,12 @@ import Footer from '../components/Footer'
 import styles from '../styles/home.module.css'
 
 const REGIONS = [
-  { id: 'gangwon', name: '강원', emoji: '🏔️' },
-  { id: 'sudo', name: '수도권', emoji: '🏙️' },
-  { id: 'chungcheong', name: '충청', emoji: '⛲' },
-  { id: 'gyeongsang', name: '경상', emoji: '🌉' },
-  { id: 'jeolla', name: '전라', emoji: '🌾' },
-  { id: 'jeju', name: '제주', emoji: '🌴' },
+  { id: 'gangwon', name: '강원', emoji: '🏔️', image: '/regions/gangwon.svg' },
+  { id: 'sudo', name: '수도권', emoji: '🏙️', image: '/regions/sudo.svg' },
+  { id: 'chungcheong', name: '충청', emoji: '⛲', image: '/regions/chungcheong.svg' },
+  { id: 'gyeongsang', name: '경상', emoji: '🌉', image: '/regions/gyeongsang.svg' },
+  { id: 'jeolla', name: '전라', emoji: '🌾', image: '/regions/jeolla.svg' },
+  { id: 'jeju', name: '제주', emoji: '🌴', image: '/regions/jeju.svg' },
 ]
 
 const REGION_NAME_LOOKUP = REGIONS.reduce((acc, r) => {
@@ -90,6 +90,22 @@ const COURSES = {
       duration: '1박 2일',
       stops: ['부산 자갈치시장 회', '부산 밀면거리', '대구 막창골목', '안동 찜닭거리'],
       desc: '싱싱한 해산물부터 얼큰한 막창, 안동 찜닭까지 경상도 미식 벨트를 도는 코스입니다.',
+    },
+    {
+      category: '청도 코스',
+      icon: '😂',
+      image: '/regions/cheongdo.svg',
+      title: '청도 코미디·레포츠 체험 코스',
+      duration: '1박 2일',
+      stops: [
+        '한국코미디타운',
+        '청도 레일바이크',
+        '청도 루지',
+        '청도소싸움경기장',
+        '새마을운동발상지',
+        '신화랑풍류마을',
+      ],
+      desc: '웃음 가득한 한국코미디타운을 중심으로, 레일바이크·루지 같은 이색 레포츠와 소싸움 경기, 새마을운동 발상지, 신화랑풍류마을까지 청도의 볼거리를 알차게 즐기는 코스입니다.',
     },
   ],
   jeolla: [
@@ -184,6 +200,7 @@ function Home() {
                 }`}
                 onClick={() => toggleRegion(r.id)}
               >
+                <img src={r.image} alt="" className={styles.mapTileImage} />
                 <span className={styles.mapTileIcon}>{r.emoji}</span>
                 <span>{r.name}</span>
               </button>
@@ -194,23 +211,30 @@ function Home() {
             <div className={styles.courseDetailList}>
               {activeCourses.map((course) => (
                 <article key={course.title} className={styles.courseDetail}>
-                  <div className={styles.courseDetailTags}>
-                    <span className={styles.courseRegionTag}>{REGION_NAME_LOOKUP[activeRegion]}</span>
-                    <span className={styles.courseCategoryTag}>
-                      {course.icon} {course.category}
-                    </span>
+                  <img
+                    src={course.image || REGIONS.find((r) => r.id === activeRegion).image}
+                    alt={`${REGION_NAME_LOOKUP[activeRegion]} 여행 이미지`}
+                    className={styles.courseDetailImage}
+                  />
+                  <div className={styles.courseDetailBody}>
+                    <div className={styles.courseDetailTags}>
+                      <span className={styles.courseRegionTag}>{REGION_NAME_LOOKUP[activeRegion]}</span>
+                      <span className={styles.courseCategoryTag}>
+                        {course.icon} {course.category}
+                      </span>
+                    </div>
+                    <h3 className={styles.courseDetailTitle}>{course.title}</h3>
+                    <p className={styles.courseDuration}>🗓 {course.duration}</p>
+                    <p className={styles.courseDetailDesc}>{course.desc}</p>
+                    <ol className={styles.stopList}>
+                      {course.stops.map((stop, i) => (
+                        <li key={stop}>
+                          <span className={styles.stopIndex}>{i + 1}</span>
+                          {stop}
+                        </li>
+                      ))}
+                    </ol>
                   </div>
-                  <h3 className={styles.courseDetailTitle}>{course.title}</h3>
-                  <p className={styles.courseDuration}>🗓 {course.duration}</p>
-                  <p className={styles.courseDetailDesc}>{course.desc}</p>
-                  <ol className={styles.stopList}>
-                    {course.stops.map((stop, i) => (
-                      <li key={stop}>
-                        <span className={styles.stopIndex}>{i + 1}</span>
-                        {stop}
-                      </li>
-                    ))}
-                  </ol>
                 </article>
               ))}
             </div>
@@ -225,14 +249,20 @@ function Home() {
             {REGIONS.map((r) =>
               COURSES[r.id].map((course) => (
                 <article key={course.title} className={styles.courseCard}>
-                  <div className={styles.courseCardThumb}>{course.icon}</div>
-                  <div className={styles.courseDetailTags}>
-                    <span className={styles.courseRegionTag}>{r.name}</span>
-                    <span className={styles.courseCategoryTag}>{course.category}</span>
+                  <img
+                    src={course.image || r.image}
+                    alt={`${r.name} 여행 이미지`}
+                    className={styles.courseCardImage}
+                  />
+                  <div className={styles.courseCardBody}>
+                    <div className={styles.courseDetailTags}>
+                      <span className={styles.courseRegionTag}>{r.name}</span>
+                      <span className={styles.courseCategoryTag}>{course.category}</span>
+                    </div>
+                    <h3 className={styles.courseCardTitle}>{course.title}</h3>
+                    <p className={styles.courseCardDuration}>{course.duration}</p>
+                    <p className={styles.courseCardDesc}>{course.desc}</p>
                   </div>
-                  <h3 className={styles.courseCardTitle}>{course.title}</h3>
-                  <p className={styles.courseCardDuration}>{course.duration}</p>
-                  <p className={styles.courseCardDesc}>{course.desc}</p>
                 </article>
               ))
             )}
