@@ -1,0 +1,16 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="travelLogoGradient" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22b8c4"/>
+      <stop offset="100%" stop-color="#0a4a54"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="60" height="60" rx="18" fill="url(#travelLogoGradient)"/>
+
+  <path
+    d="M32 14C24.8 14 19 19.8 19 27C19 36.5 32 50 32 50C32 50 45 36.5 45 27C45 19.8 39.2 14 32 14Z"
+    fill="#ffffff"
+  />
+  <circle cx="32" cy="27" r="6" fill="url(#travelLogoGradient)"/>
+</svg>
