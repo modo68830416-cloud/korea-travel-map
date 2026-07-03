@@ -170,20 +170,42 @@
   grid-area: jeju;
 }
 
-.courseDetail {
+.courseDetailList {
   margin-top: 28px;
-  background: #f2fafb;
-  border-radius: 16px;
-  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   max-width: 640px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.courseDetail {
+  background: #f2fafb;
+  border-radius: 16px;
+  padding: 24px 28px;
+}
+
+.courseDetailTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .courseRegionTag {
   display: inline-block;
   background: #e6f6f8;
   color: #0a4a54;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.courseCategoryTag {
+  display: inline-block;
+  background: #fdeee0;
+  color: #a15b1a;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 4px 10px;
